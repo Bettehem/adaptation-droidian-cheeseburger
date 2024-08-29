@@ -1,4 +1,4 @@
-adaptation-droidian-oneplus3 (9+git20230704234148.956a86f.release) trixie; urgency=medium
+adaptation-droidian-cheeseburger (9+git20230704234148.956a86f.release) trixie; urgency=medium
 
   [ Bardia Moshiri ]
   * pulse: disable deep buffer output
@@ -9,44 +9,44 @@ adaptation-droidian-oneplus3 (9+git20230704234148.956a86f.release) trixie; urgen
 
  -- Bardia Moshiri <fakeshell@bardia.tech>  Tue, 04 Jul 2023 23:41:48 -0400
 
-adaptation-droidian-oneplus3 (7) bookworm; urgency=medium
+adaptation-droidian-cheeseburger (7) bookworm; urgency=medium
 
   * Cleanup.
   * Merge pull request #1 from Bettehem/bookworm
 
  -- Bettehem <chris.mustola@gmail.com>  Fri, 23 Jun 2023 03:12:16 +0300
 
-adaptation-droidian-oneplus3 (6) bookworm; urgency=medium
+adaptation-droidian-cheeseburger (6) bookworm; urgency=medium
 
   * make gst-droid not load to not conflict with aal and sysfs
 
  -- Bardia Moshiri <fakeshell@bardia.tech>  Wed, 21 Jun 2023 21:43:35 -0400
 
-adaptation-droidian-oneplus3 (5) bookworm; urgency=medium
+adaptation-droidian-cheeseburger (5) bookworm; urgency=medium
 
   * add droidian-quirks-full-resize as a dependency
 
  -- Bardia Moshiri <fakeshell@bardia.tech>  Mon, 19 Jun 2023 17:08:21 -0400
 
-adaptation-droidian-oneplus3 (4) bookworm; urgency=medium
+adaptation-droidian-cheeseburger (4) bookworm; urgency=medium
 
   * build the package as arm64
 
  -- Bardia Moshiri <fakeshell@bardia.tech>  Mon, 19 Jun 2023 00:29:56 -0400
 
-adaptation-droidian-oneplus3 (3) bookworm; urgency=medium
+adaptation-droidian-cheeseburger (3) bookworm; urgency=medium
 
   * drop batman as its not added to meta
 
  -- Bardia Moshiri <fakeshell@bardia.tech>  Mon, 19 Jun 2023 00:22:03 -0400
 
-adaptation-droidian-oneplus3 (2) bookworm; urgency=medium
+adaptation-droidian-cheeseburger (2) bookworm; urgency=medium
 
   * add all directories to *.dirs
 
  -- Bardia Moshiri <fakeshell@bardia.tech>  Tue, 06 Jun 2023 19:26:46 -0400
 
-adaptation-droidian-oneplus3 (1) bookworm; urgency=medium
+adaptation-droidian-cheeseburger (1) bookworm; urgency=medium
 
   [ Bardia Moshiri ]
   * add files

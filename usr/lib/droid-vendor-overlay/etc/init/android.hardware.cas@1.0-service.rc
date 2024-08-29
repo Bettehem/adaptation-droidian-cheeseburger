@@ -1,3 +1,0 @@
-service vendor.cas-hal-1-0 android.hardware.cas@1.0-service_HALIUM_DISABLED
-    disabled
-    override

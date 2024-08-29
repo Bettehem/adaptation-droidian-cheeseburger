@@ -1,3 +1,0 @@
-service alarm-hal-1-0 vendor.qti.hardware.alarm@1.0-service_HALIUM_DISABLED
-    disabled
-    override

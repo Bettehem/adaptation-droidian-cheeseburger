@@ -1,5 +1,5 @@
-Source: adaptation-droidian-oneplus3
-Maintainer: Bardia Moshiri
+Source: adaptation-droidian-cheeseburger
+Maintainer: Chris Mustola
 Section: metapackages
 Priority: optional
 Build-Depends: debhelper, 
@@ -15,57 +15,46 @@ Build-Depends: debhelper,
                libglib2.0-dev,
                pkgconf,
 Standards-Version: 4.5.0.3
-Vcs-Browser: https://github.com/droidian-devices/adaptation-droidian-oneplus3
-Vcs-Git: https://github.com/droidian-devices/adaptation-droidian-oneplus3.git
+Vcs-Browser: https://github.com/Bettehem/adaptation-droidian-cheeseburger
+Vcs-Git: https://github.com/droidian-devices/adaptation-droidian-cheeseburger.git
 
-Package: adaptation-droidian-oneplus3
+Package: adaptation-droidian-cheeseburger
 Architecture: arm64
 Depends: ${misc:Depends},
          adaptation-hybris-api28-phone,
-         adaptation-oneplus3-configs,
-         linux-bootimage-oneplus-oneplus3,
+         adaptation-cheeseburger-configs,
+         linux-bootimage-oneplus-msm8998,
          droidian-quirks-full-resize,
          droidian-camera,
          inotify-tools,
          libpulse-mainloop-glib0,
-Description: adapatation-oneplus3-meta
- oneplus3 api28 adaptation metapackage
+Description: adapatation-cheeseburger-meta
+ cheeseburger api28 adaptation metapackage
 
-Package: adaptation-oneplus3-configs
+Package: adaptation-cheeseburger-configs
 Architecture: arm64
 Depends: ${misc:Depends},
-Provides: tristate-switch, lights-on-action, menu-on-action, wifiman-fwpath, btscanner-gcc
-Conflicts: tristate-switch, lights-on-action, menu-on-action, wifiman-fwpath, btscanner-gcc
-Description: oneplus3's adaptation configs
+Provides: tristate-switch, lights-on-action, menu-on-action
+Conflicts: tristate-switch, lights-on-action, menu-on-action
+Description: cheeseburger's adaptation configs
 
 Package: tristate-switch
 Architecture: any
 Depends: ${misc:Depends},
          libpulse-mainloop-glib0,
          inotify-tools,
-Conflicts: adaptation-oneplus3-configs
+Conflicts: adaptation-cheeseburger-configs
 Description: tristate switch service
 
 Package: lights-on-action
 Architecture: any
 Depends: ${misc:Depends},
-Conflicts: adaptation-oneplus3-configs
+Conflicts: adaptation-cheeseburger-configs
 Description: turn lights on when a key is pressed
 
 Package: menu-on-action
 Architecture: any
 Depends: ${misc:Depends},
-Conflicts: adaptation-oneplus3-configs
+Conflicts: adaptation-cheeseburger-configs
 Description: toggle the phosh drawer when a key is pressed
 
-Package: wifiman-fwpath
-Architecture: any
-Depends: ${misc:Depends},
-Conflicts: adaptation-oneplus3-configs
-Description: small service to fix fwpath content on buggy implementations
-
-Package: btscanner-gcc
-Architecture: any
-Depends: ${misc:Depends},
-Conflicts: adaptation-oneplus3-configs
-Description: small service to start scanning for bluetooth devices when gcc is opened on buggy implementations

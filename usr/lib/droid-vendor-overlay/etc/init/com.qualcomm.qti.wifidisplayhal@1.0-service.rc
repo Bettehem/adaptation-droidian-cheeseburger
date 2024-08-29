@@ -1,3 +1,0 @@
-service wifidisplayhalservice wifidisplayhalservice_HALIUM_DISABLED
-    disabled
-    override

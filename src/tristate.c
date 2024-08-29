@@ -239,11 +239,11 @@ int main(int argc, char *argv[]) {
             read(fd_device, &ev, sizeof(struct input_event));
             if (ev.type == EV_KEY && ev.value == 1) {
                 switch (ev.code) {
-                    case 600:
+                    case 601:
                         unmute();
                         enqueue("pactl set-source-mute @DEFAULT_SOURCE@ 0");
                         break;
-                    case 601:
+                    case 602:
                         unmute();
                         enqueue("pactl set-source-mute @DEFAULT_SOURCE@ 1");
                         NotifyNotification *mic_mute_notification = notify_notification_new("Audio status", "Audio has been muted (Input)", NULL);
@@ -257,7 +257,7 @@ int main(int argc, char *argv[]) {
                         notify_notification_show(mic_mute_notification, NULL);
                         g_object_unref(mic_mute_notification);
                         break;
-                    case 602:
+                    case 603:
                         mute();
                         enqueue("pactl set-source-mute @DEFAULT_SOURCE@ 1");
                         break;

@@ -5,7 +5,7 @@
 #include <sys/inotify.h>
 #include <linux/input.h>
 
-#define DEVICE_FILE "/dev/input/event5"
+#define DEVICE_FILE "/dev/input/event4"
 
 int main() {
         struct input_event ev;

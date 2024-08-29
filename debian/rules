@@ -8,27 +8,20 @@ override_dh_auto_build:
 	gcc -o usr/bin/fpc1020 src/fpc1020.c src/virtual-keyboard-unstable-v1-protocol.c -lwayland-client -lxkbcommon
 	gcc -o usr/bin/s1302 src/s1302.c src/virtual-keyboard-unstable-v1-protocol.c -lwayland-client -lxkbcommon
 	gcc -o usr/bin/tristate src/tristate.c `pkg-config --cflags --libs libnotify` -lpulse
-	gcc -o usr/bin/wifiman src/wifiman.c
-	gcc -o usr/bin/btscanner src/btscanner.c
 	gcc -o usr/bin/port-settings src/port-settings/port-settings.c src/port-settings/configcontrol.c `pkg-config --cflags --libs gtk4 libadwaita-1 gmodule-2.0`
 
 override_dh_auto_install:
-	cp debian/adaptation-oneplus3-configs.fpc1020.service debian/fpc1020.service
-	cp debian/adaptation-oneplus3-configs.lights.service debian/lights.service
-	cp debian/adaptation-oneplus3-configs.tristate.service debian/tristate.service
-	cp debian/adaptation-oneplus3-configs.btscanner.service debian/btscanner.service
-	cp debian/adaptation-oneplus3-configs.wifiman.service debian/wifiman.service
+	cp debian/adaptation-cheeseburger-configs.fpc1020.service debian/fpc1020.service
+	cp debian/adaptation-cheeseburger-configs.lights.service debian/lights.service
+	cp debian/adaptation-cheeseburger-configs.tristate.service debian/tristate.service
 
 	dh_auto_install
-	install -D -m 0644 debian/adaptation-oneplus3-configs.fpc1020.service debian/adaptation-oneplus3-configs/usr/lib/systemd/user/fpc1020.service
-	install -D -m 0644 debian/adaptation-oneplus3-configs.s1302.service debian/adaptation-oneplus3-configs/usr/lib/systemd/user/s1302.service
-	install -D -m 0644 debian/adaptation-oneplus3-configs.tristate.service debian/adaptation-oneplus3-configs/usr/lib/systemd/user/tristate.service
+	install -D -m 0644 debian/adaptation-cheeseburger-configs.fpc1020.service debian/adaptation-cheeseburger-configs/usr/lib/systemd/user/fpc1020.service
+	install -D -m 0644 debian/adaptation-cheeseburger-configs.s1302.service debian/adaptation-cheeseburger-configs/usr/lib/systemd/user/s1302.service
+	install -D -m 0644 debian/adaptation-cheeseburger-configs.tristate.service debian/adaptation-cheeseburger-configs/usr/lib/systemd/user/tristate.service
 
 override_dh_installsystemd:
-	dh_installsystemd -padaptation-oneplus3-configs --name=dashd dashd.service --no-start
-	dh_installsystemd -padaptation-oneplus3-configs --name=double-tap double-tap.service --no-start
-	dh_installsystemd -padaptation-oneplus3-configs --name=keyboard-layout keyboard-layout.service --no-start
-	dh_installsystemd -padaptation-oneplus3-configs --name=lights lights.service
-	dh_installsystemd -padaptation-oneplus3-configs --name=wifiman wifiman.service
-	dh_installsystemd -padaptation-oneplus3-configs --name=btscanner btscanner.service
-	dh_installsystemd -padaptation-oneplus3-configs --name=droidian-perf droidian-perf.service --no-start
+	dh_installsystemd -padaptation-cheeseburger-configs --name=double-tap double-tap.service --no-start
+	dh_installsystemd -padaptation-cheeseburger-configs --name=keyboard-layout keyboard-layout.service --no-start
+	dh_installsystemd -padaptation-cheeseburger-configs --name=lights lights.service
+	dh_installsystemd -padaptation-cheeseburger-configs --name=droidian-perf droidian-perf.service --no-start

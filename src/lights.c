@@ -12,6 +12,7 @@
 
 char DEVICE_FILE[MAX_CONFIG_LINE_LENGTH];
 char LED_BRIGHTNESS[MAX_CONFIG_LINE_LENGTH];
+int MAX_BRIGHTNESS;
 
 void readconfig() {
     FILE *file = fopen(CONFIG_PATH, "r");
@@ -29,6 +30,8 @@ void readconfig() {
             strcpy(DEVICE_FILE, value);
         } else if (strcmp(key, "LED_BRIGHTNESS") == 0) {
             strcpy(LED_BRIGHTNESS, value);
+        } else if (strcmp(key, "MAX_BRIGHTNESS") == 0) {
+            MAX_BRIGHTNESS = atoi(value);
         }
     }
 
@@ -38,7 +41,7 @@ void readconfig() {
 void lights() {
     FILE *f = fopen(LED_BRIGHTNESS, "w");
     if (f != NULL) {
-        fprintf(f, "40");
+        fprintf(f, "%d", MAX_BRIGHTNESS);
         fclose(f);
         sleep(1);
         f = fopen(LED_BRIGHTNESS, "w");
